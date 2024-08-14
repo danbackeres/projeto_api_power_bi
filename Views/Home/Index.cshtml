@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    header, nav {
+        flex-shrink: 0;
+    }
+
+    #reportContainer {
+        flex-grow: 1;
+        width: 100%;
+        height: calc(100vh - 50px); 
+    }
+</style>
+
+<div id="reportContainer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/powerbi-client/dist/powerbi.min.js"></script>
+<script>
+    var models = window['powerbi-client'].models;
+    var embedConfiguration = {
+        type: 'report',
+        id: '@ViewBag.ReportId',
+        embedUrl: '@ViewBag.EmbedUrl',
+        accessToken: '@ViewBag.EmbedToken',
+        tokenType: models.TokenType.Embed,
+        settings: {
+            navContentPaneEnabled: false,
+            filterPaneEnabled: false,
+            navigationPaneEnabled: false
+        }
+    };
+
+    var reportContainer = document.getElementById('reportContainer');
+    var report = powerbi.embed(reportContainer, embedConfiguration);
+</script>

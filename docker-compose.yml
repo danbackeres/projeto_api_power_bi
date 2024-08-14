@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    image: powerbi-report-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./Views:/app/Views
+      - ./wwwroot:/app/wwwroot
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  server:
+    image: mcr.microsoft.com/dotnet/aspnet:6.0
+    ports:
+      - "8081:80"
