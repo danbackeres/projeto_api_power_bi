@@ -8,7 +8,7 @@ Bem-vindo ao **Projeto API Power BI**! Este projeto foi criado para demonstrar c
 
 Para mais detalhes sobre como esse projeto foi concebido, bem como uma explicação passo a passo de como configurar a API do Power BI, confira o artigo completo no LinkedIn:
 
-[Guia Completo: Como Incorporar Relatórios do Power BI Usando a API do Power BI](https://www.linkedin.com/in/daniel-hemerly-de-backer-256851321)
+[Guia Completo: Como Incorporar Relatórios do Power BI Usando a API do Power BI]([https://www.linkedin.com/in/daniel-hemerly-de-backer-256851321](https://www.linkedin.com/pulse/guia-completo-como-incorporar-relat%25C3%25B3rios-do-power-bi-daniel-f1jje))
 
 ### Pré-requisitos
 
